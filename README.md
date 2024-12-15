@@ -1,66 +1,72 @@
-Apple Stock Price Analysis
-This project investigates the macroeconomic factors influencing Apple's stock price from 2015 to 2024. The analysis leverages datasets related to Apple stock price, economic indicators (like the Federal Funds Rate, inflation, and GDP), and various data visualization and econometric techniques.
+Analyzing the Impact of Macroeconomic Factors on Apple Stock Performance (2015–2024)
+Project Overview
+This project investigates the relationship between macroeconomic indicators and Apple Inc.'s stock price from 2015 to 2024. By applying multiple linear regression models and time series analysis, we uncover how factors like Real GDP Index, Inflation, and historical stock trends influence Apple’s stock price. The findings provide actionable insights for investment firms and financial analysts to optimize portfolio strategies.
 
-📁 File Structure
-1. Aggregate_data.csv
-Description: Consolidated data file combining all key macroeconomic indicators and Apple’s stock prices.
-Contents:
-Apple Stock Price
-Fed Funds Rate
-Inflation Rate
-Real GDP Index
-S&P 500 Index
-2. Apple stock price.csv
-Description: Historical Apple stock prices from 2015 to 2024.
-Source: NASDAQ or other financial platforms.
-3. FEDFUNDS.csv
-Description: Federal Funds Rate data representing interest rate changes over the selected time period.
-Source: Federal Reserve Bank of St. Louis (FRED).
-4. Inflation rate.xlsx
-Description: Monthly inflation rates in percentage format.
-Source: U.S. Bureau of Labor Statistics (BLS).
-5. sp500_index.csv
-Description: Historical S&P 500 Index values representing broader market trends.
-Source: S&P Global/NASDAQ.
-6. Mini analytics_Apple stock vs macro.ipynb
-Description: Jupyter Notebook containing:
-Exploratory Data Analysis (EDA)
-Data Cleaning and Preprocessing
-Multiple Linear Regression models
-Residual Analysis and Visualization
-Business Insights and Visualizations
-📊 Overview of Analysis
-The project analyzes the relationships between Apple's stock price and macroeconomic factors:
+Objectives
+Identify which macroeconomic factors most influence Apple's stock price.
+Examine how historical trends predict future stock values.
+Provide actionable insights for portfolio adjustments in response to economic indicators.
+Data Sources
+Apple Stock Price: NASDAQ
+S&P 500 Index: NASDAQ
+Federal Funds Rate: Federal Reserve Economic Data (FRED)
+Inflation Rate (CPI): U.S. Bureau of Labor Statistics
+Monthly Real GDP Index: S&P Global
+Data was aggregated, cleaned, and standardized for consistency and accuracy.
 
-Inflation: Assessing the impact of rising prices on stock performance.
-Federal Funds Rate: Examining the influence of interest rates on stock prices.
-GDP Index: Analyzing how economic growth correlates with Apple’s performance.
-S&P 500 Index: Identifying market-wide trends affecting Apple’s stock.
-🛠 Technologies & Libraries Used
-Python (Pandas, NumPy, Matplotlib, Seaborn, Statsmodels, Scikit-learn)
-Jupyter Notebook for code development and documentation.
-Excel for basic data storage and formatting.
-🚀 How to Run the Project
+Files
+Apple stock price.csv
+Contains historical closing prices of Apple stock from 2015–2024.
+
+FEDFUNDS.csv
+Data on Federal Funds Rate provided by FRED.
+
+Inflation rate.xlsx
+Contains monthly Consumer Price Index (CPI) changes to measure inflation.
+
+sp500_index.csv
+S&P 500 index historical closing prices for benchmarking performance.
+
+Aggregate_data.csv
+Combined dataset integrating all macroeconomic indicators with Apple stock prices.
+
+Mini analytics_Apple stock vs macro.ipynb
+The main Python notebook implementing:
+
+Data cleaning and EDA
+Multiple regression models
+Residual and autocorrelation analysis
+Visualizations (trends, scatter plots, residual diagnostics)
+Tools & Libraries
+The following Python libraries were used for analysis and visualization:
+
+Pandas: Data manipulation and cleaning
+NumPy: Numerical operations
+Matplotlib & Seaborn: Visualizations (line charts, scatter plots, regression lines)
+Statsmodels: Regression modeling and summary statistics
+Sklearn: Variance Inflation Factor (VIF) for multicollinearity checks
+SciPy: Correlation analysis
+Key Visualizations
+Scatter plots with regression lines: Visualize relationships between Apple's stock price and macroeconomic variables.
+Trend analysis: Line graphs showing historical trends for Apple’s stock price, Real GDP, and Inflation.
+Residual analysis: Scatter plots for model diagnostics.
+Key Findings
+Real GDP Index positively influences Apple’s stock price, aligning with economic expansion trends.
+Inflation negatively impacts Apple’s stock price, suggesting reduced consumer spending during high inflation periods.
+Lagged stock price is a strong predictor of Apple’s future performance, supporting momentum strategies.
+How to Run
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/yourusername/yourproject.git
-Install the required libraries:
+git clone https://github.com/username/repository-name.git
+cd repository-name
+Install required libraries:
 bash
 Copy code
 pip install pandas numpy matplotlib seaborn statsmodels scikit-learn
-Open the Jupyter Notebook:
-bash
-Copy code
-jupyter notebook "Mini analytics_Apple stock vs macro.ipynb"
-Run each cell sequentially to reproduce the analysis.
-🔍 Insights
-The most influential macroeconomic factors for Apple stock price.
-The role of lagged stock prices in predicting future performance.
-Visualizations that highlight relationships between Apple’s stock price and economic indicators.
-📄 Conclusion
-This project provides actionable insights for investment firms to:
+Open Mini analytics_Apple stock vs macro.ipynb in Jupyter Notebook or a similar Python environment.
+Run each cell sequentially to reproduce the analysis and visualizations.
+Conclusion
+This project highlights the importance of macroeconomic indicators in predicting Apple’s stock price. Real GDP and inflation rates provide actionable signals for long-term investments, while historical trends enable short-term predictive strategies.
 
-Monitor economic indicators like GDP growth and inflation.
-Use historical stock prices for predictive analysis.
-Adjust portfolios based on economic trends.
+For further analysis, consider extending the model using ARIMA or VAR techniques for time series forecasting.
